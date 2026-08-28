@@ -1,0 +1,741 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="TwinArmsLeader">
+  <material name="grey">
+    <color rgba="0.5 0.5 0.5 1" />
+  </material>
+  <material name="yellow">
+    <color rgba="1 1 0 1" />
+  </material>
+  <material name="orange">
+    <color rgba="1 0.5 0 1" />
+  </material>
+  <material name="blue">
+    <color rgba="0 0 1 1" />
+  </material>
+  <material name="green">
+    <color rgba="0 1 0 1" />
+  </material>
+  <material name="black">
+    <color rgba="0.2 0.2 0.2 1" />
+  </material>
+  <material name="white">
+    <color rgba="0.8 0.8 0.8 1" />
+  </material>
+  <material name="tactile_white">
+    <color rgba="0.78 0.92 1.0 0.8" />
+  </material>
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.08059011158698011 0.0017167200374618803 0.27625562460623326" rpy="0.0 0.0 0.0" />
+      <mass value="173.4466351821401" />
+      <inertia ixx="19.299583302886923" iyy="18.812065954889924" izz="9.622744618696638" ixy="-0.028590132154536492" iyz="0.005831218766764068" ixz="2.9302329243300007" />
+    </inertial>
+    <visual name="BASE-v3_visual">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/BASE-v7.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="grey" />
+    </visual>
+    <collision name="BASE-v3_collision">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/BASE-v7.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="L1-v3">
+    <inertial>
+      <origin xyz="0.012043762020132149 0.014654267676379647 -0.0946249542732906" rpy="0.0 3.363734916805872e-30 -7.888609052210118e-31" />
+      <mass value="3.9956238970464604" />
+      <inertia ixx="0.04613967669247814" iyy="0.030225686048793568" izz="0.035575187237959154" ixy="0.003130160720542873" iyz="0.00017717113493088366" ixz="0.0040404098158835135" />
+    </inertial>
+    <visual name="L1-v3_visual">
+      <origin xyz="-0.10800000525139751 -1.5605988323841303e-09 -0.0880000038332998" rpy="3.1415926535897927 -5.273559366969525e-16 3.141592653589793" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L1-v3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="yellow" />
+    </visual>
+    <collision name="L1-v3_collision">
+      <origin xyz="-0.10800000525139751 -1.5605988323841303e-09 -0.0880000038332998" rpy="3.1415926535897927 -5.273559366969525e-16 3.141592653589793" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L1-v3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="L2-v1">
+    <inertial>
+      <origin xyz="0.007671666440182259 0.08329919486223573 0.051649503879198165" rpy="0.0 -0.0 0.0" />
+      <mass value="4.501985566570569" />
+      <inertia ixx="0.020471614614246292" iyy="0.017064652466746932" izz="0.03221179070741309" ixy="-9.331476763127483e-06" iyz="6.101473894351716e-05" ixz="0.0014496876578945364" />
+    </inertial>
+    <visual name="L2-v1_visual">
+      <origin xyz="0.007582552979410418 0.08150000156059918 0.08666893377791161" rpy="-0.025158541126842862 -0.0835700757173135 -2.8487955232371345" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L2-v5.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="yellow" />
+    </visual>
+    <collision name="L2-v1_collision">
+      <origin xyz="0.007582552979410418 0.08150000156059918 0.08666893377791161" rpy="-0.025158541126842862 -0.0835700757173135 -2.8487955232371345" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L2-v5.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="L3-v1">
+    <inertial>
+      <origin xyz="0.007978724916031195 -0.03303455005677677 -0.018070661524681526" rpy="0.0 -1.5407439555097887e-33 -1.2274208446222186e-32" />
+      <mass value="2.8586135589288357" />
+      <inertia ixx="0.015725493684460627" iyy="0.017761897042582346" izz="0.010656884879428504" ixy="0.0012951004331074308" iyz="-0.002034006333096138" ixz="0.0010734562012720966" />
+    </inertial>
+    <visual name="L3-v1_visual">
+      <origin xyz="-0.0026146693030196034 0.02988583716484108 1.5605992587097717e-09" rpy="5.69049754126567e-15 -7.383881405960619e-05 -3.0543261909900776" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L3-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="orange" />
+    </visual>
+    <collision name="L3-v1_collision">
+      <origin xyz="-0.0026146693030196034 0.02988583716484108 1.5605992587097717e-09" rpy="5.69049754126567e-15 -7.383881405960619e-05 -3.0543261909900776" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L3-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="L4-v1">
+    <inertial>
+      <origin xyz="0.11330688191903042 0.008143788163053358 -0.06534582603252986" rpy="0.0 -3.009265538105056e-36 -1.2125180453872666e-35" />
+      <mass value="3.25527889121089" />
+      <inertia ixx="0.011214728545903444" iyy="0.01951229846878722" izz="0.01697032081366534" ixy="-0.0005742831181709823" iyz="-0.0002017297181140508" ixz="0.0013612526509073604" />
+    </inertial>
+    <visual name="L4-v1_visual">
+      <origin xyz="0.2500400024358516 0.021875664755957515 -0.0661185312788551" rpy="-0.9211967331694477 -7.383881405867719e-05 -3.0543261909900776" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L4-v5.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="blue" />
+    </visual>
+    <collision name="L4-v1_collision">
+      <origin xyz="0.2500400024358516 0.021875664755957515 -0.0661185312788551" rpy="-0.9211967331694477 -7.383881405867719e-05 -3.0543261909900776" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L4-v5.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="L5-v1">
+    <inertial>
+      <origin xyz="1.547034145673365e-05 -0.016829347006785726 0.03341290974868152" rpy="4.52894463484811e-34 -0.0 -4.276423536147513e-50" />
+      <mass value="0.415943600332398" />
+      <inertia ixx="0.001407045990148958" iyy="0.0007051125113658461" izz="0.0010724126113280663" ixy="-1.4535419640130601e-07" iyz="0.0003165458434678941" ixz="-3.006061649514247e-09" />
+    </inertial>
+    <visual name="L5-v1_visual">
+      <origin xyz="4.6512788551922315e-06 0.0054908147559577 0.06276026243585171" rpy="0.42161372885922643 1.48352983303589 -1.57164353197265" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L5-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="green" />
+    </visual>
+    <collision name="L5-v1_collision">
+      <origin xyz="4.6512788551922315e-06 0.0054908147559577 0.06276026243585171" rpy="0.42161372885922643 1.48352983303589 -1.57164353197265" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L5-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="L6-v1">
+    <inertial>
+      <origin xyz="0.014532959261129364 0.019008409028948226 0.05739810484067619" rpy="0.0 -0.0 0.0" />
+      <mass value="0.5474294253947277" />
+      <inertia ixx="0.001258775339656459" iyy="0.0009223368143147545" izz="0.0005627346960087553" ixy="-4.670181180539612e-05" iyz="0.00019352380462398804" ixz="5.0495630223752596e-05" />
+    </inertial>
+    <visual name="L6-v1_visual">
+      <origin xyz="0.013617022662402506 0.03723140586078524 0.017099673945131004" rpy="1.2055985299109595 -0.0054938975511570134 3.048421897054313" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L6-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="green" />
+    </visual>
+    <collision name="L6-v1_collision">
+      <origin xyz="0.013617022662402506 0.03723140586078524 0.017099673945131004" rpy="1.2055985299109595 -0.0054938975511570134 3.048421897054313" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L6-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Gripper-L-v2">
+    <inertial>
+      <origin xyz="-0.08360369022467172 -0.0548781299151517 -0.0459858961036273" rpy="0.0 -8.578749689791554e-18 2.168404344971009e-19" />
+      <mass value="3.1903965379975725" />
+      <inertia ixx="0.01227276637505263" iyy="0.008814227011936359" izz="0.007611412178359321" ixy="-0.0005329431912698875" iyz="-0.00033984197175338876" ixz="-0.0004221072767301871" />
+    </inertial>
+    <visual name="Gripper-L-v2_visual">
+      <origin xyz="-0.09606071080707845 -0.10271548585063926 -0.08543018267668111" rpy="-0.12038745328753607 0.055517482150678255 1.5688843248146216" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Gripper-L-v4.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="black" />
+    </visual>
+    <collision name="Gripper-L-v2_collision">
+      <origin xyz="-0.09606071080707845 -0.10271548585063926 -0.08543018267668111" rpy="-0.12038745328753607 0.055517482150678255 1.5688843248146216" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Gripper-L-v4.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Finger-L1-v2">
+    <inertial>
+      <origin xyz="-0.015937983222892173 -0.0031190766090706747 0.036576079115967206" rpy="-2.465190330988216e-32 5.877471754111438e-39 0.0" />
+      <mass value="0.6576980208877717" />
+      <inertia ixx="0.0008630999644537733" iyy="0.000886640095271952" izz="0.00016202245335983367" ixy="3.831064746162575e-06" iyz="-8.010527613566817e-06" ixz="7.154170073819819e-05" />
+    </inertial>
+    <visual name="Finger-L1-v2_visual">
+      <origin xyz="-0.014997587328640663 -0.024095643622458168 0.034883927994018155" rpy="1.6580627896312878 -7.355544407515626e-05 3.1415862183222782" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Finger-L1-v2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="white" />
+    </visual>
+    <collision name="Finger-L1-v2_collision">
+      <origin xyz="-0.014997587328640663 -0.024095643622458168 0.034883927994018155" rpy="1.6580627896312878 -7.355544407515626e-05 3.1415862183222782" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Finger-L1-v2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Finger-L2-v2">
+    <inertial>
+      <origin xyz="0.015943327809598173 0.0031501384355608762 -0.0365764276901141" rpy="-2.465190330988216e-32 -5.877471754111438e-39 0.0" />
+      <mass value="0.6576980208878244" />
+      <inertia ixx="0.0008625284585004893" iyy="0.0008861424862711695" izz="0.00016199088229035263" ixy="4.132967354492117e-06" iyz="-1.0855757130112796e-05" ixz="7.161860037421793e-05" />
+    </inertial>
+    <visual name="Finger-L2-v2_visual">
+      <origin xyz="0.015002413012096838 0.02435057921402084 -0.03490400242451841" rpy="-1.4835298639585057 7.35554440483447e-05 -3.1415862183222636" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Finger-L2-v2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="white" />
+    </visual>
+    <collision name="Finger-L2-v2_collision">
+      <origin xyz="0.015002413012096838 0.02435057921402084 -0.03490400242451841" rpy="-1.4835298639585057 7.35554440483447e-05 -3.1415862183222636" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Finger-L2-v2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="R1-v1">
+    <inertial>
+      <origin xyz="0.01202807521913318 -0.009416303565375444 -0.09461919460154304" rpy="0.0 1.108177018770617e-30 -7.888609052210118e-31" />
+      <mass value="3.9972599754472093" />
+      <inertia ixx="0.046658490539563675" iyy="0.03022751742557775" izz="0.03609654402871272" ixy="-0.003916333358321125" iyz="0.0016885723182976924" ixz="0.004040023029751884" />
+    </inertial>
+    <visual name="R1-v1_visual">
+      <origin xyz="-0.10799999764969272 1.5606002534696017e-09 -0.08799999704251409" rpy="-1.3169180980537914e-16 -2.775557561563008e-17 3.141592653589793" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R1-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="yellow" />
+    </visual>
+    <collision name="R1-v1_collision">
+      <origin xyz="-0.10799999764969272 1.5606002534696017e-09 -0.08799999704251409" rpy="-1.3169180980537914e-16 -2.775557561563008e-17 3.141592653589793" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R1-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="R2-v1">
+    <inertial>
+      <origin xyz="0.00908475664462591 0.07943534515757321 -0.047306089968950714" rpy="0.0 -0.0 0.0" />
+      <mass value="2.8033335960998857" />
+      <inertia ixx="0.015078379708593825" iyy="0.011453571009390706" izz="0.02229061628594131" ixy="-2.5128461699329332e-05" iyz="0.000269864025723247" ixz="-0.000990477082669181" />
+    </inertial>
+    <visual name="R2-v1_visual">
+      <origin xyz="-1.2397916859633833 1.0783165791956995 0.6458378929401409" rpy="-3.1415926535897887 -0.3082133964808166 4.046471901659293e-16" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R2-v4.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="yellow" />
+    </visual>
+    <collision name="R2-v1_collision">
+      <origin xyz="-1.2397916859633833 1.0783165791956995 0.6458378929401409" rpy="-3.1415926535897887 -0.3082133964808166 4.046471901659293e-16" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R2-v4.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="R3-v1">
+    <inertial>
+      <origin xyz="-0.011687447341585689 0.03290319694126559 0.015859411233568325" rpy="3.0814879110195774e-33 -0.0 -7.703719777548943e-34" />
+      <mass value="2.867118850055206" />
+      <inertia ixx="0.015060053506928123" iyy="0.017813047716538577" izz="0.011406655509752115" ixy="0.0017140190418180158" iyz="-0.0017048056056105675" ixz="0.00205236790317733" />
+    </inertial>
+    <visual name="R3-v1_visual">
+      <origin xyz="0.002551115229799823 -0.029885844145762376 0.0005730143883793914" rpy="-0.019573892670585097 -0.2200922920354623 0.089429299808684" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R3-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="orange" />
+    </visual>
+    <collision name="R3-v1_collision">
+      <origin xyz="0.002551115229799823 -0.029885844145762376 0.0005730143883793914" rpy="-0.019573892670585097 -0.2200922920354623 0.089429299808684" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R3-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="R4-v2">
+    <inertial>
+      <origin xyz="0.11331071014511782 -0.00814240505915791 -0.0653360931597301" rpy="0.0 -0.0 -8.758115402030114e-47" />
+      <mass value="3.2550859322966854" />
+      <inertia ixx="0.011214014004277573" iyy="0.01951153176326148" izz="0.01696990715552793" ixy="0.0005742003512126119" iyz="0.00020178697982164883" ixz="0.0013608596091468938" />
+    </inertial>
+    <visual name="R4-v2_visual">
+      <origin xyz="0.2500448731101384 -0.021876092445692236 -0.06609999843939889" rpy="0.9211967331694528 1.9668381974190417e-15 3.054326190990077" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R4-v4.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="blue" />
+    </visual>
+    <collision name="R4-v2_collision">
+      <origin xyz="0.2500448731101384 -0.021876092445692236 -0.06609999843939889" rpy="0.9211967331694528 1.9668381974190417e-15 3.054326190990077" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R4-v4.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="R5-v2">
+    <inertial>
+      <origin xyz="1.3113815595886536e-05 -0.01682624843494615 -0.03341385028595042" rpy="5.963931949894763e-34 -0.0 0.0" />
+      <mass value="0.416004620300922" />
+      <inertia ixx="0.001407176607099242" iyy="0.0007051501514847569" izz="0.0010725323292469224" ixy="-1.6390895718484778e-07" iyz="-0.0003165410563247123" ixz="-1.9574795395817903e-08" />
+    </inertial>
+    <visual name="R5-v2_visual">
+      <origin xyz="-1.5606015324465262e-09 0.005490812445692086 -0.0627602631101388" rpy="2.719134943425042 -1.4835298641951817 -1.5707963267948777" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R5-v2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="green" />
+    </visual>
+    <collision name="R5-v2_collision">
+      <origin xyz="-1.5606015324465262e-09 0.005490812445692086 -0.0627602631101388" rpy="2.719134943425042 -1.4835298641951817 -1.5707963267948777" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R5-v2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="R6-v1">
+    <inertial>
+      <origin xyz="0.007218321593348946 0.05728193704728518 0.0231029024764527" rpy="0.0 -0.0 0.0" />
+      <mass value="0.5474294253947277" />
+      <inertia ixx="0.0012586694149846478" iyy="0.0009219655486323403" izz="0.0005632118863627318" ixy="4.7298677807431526e-05" iyz="-0.00019398405478165484" ixz="5.022349888175894e-05" />
+    </inertial>
+    <visual name="R6-v1_visual">
+      <origin xyz="0.006295957653980047 0.03909180015925912 -0.017210225047807625" rpy="2.0471077894395915 -0.005561294024846195 -3.0484520559526103" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R6-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="green" />
+    </visual>
+    <collision name="R6-v1_collision">
+      <origin xyz="0.006295957653980047 0.03909180015925912 -0.017210225047807625" rpy="2.0471077894395915 -0.005561294024846195 -3.0484520559526103" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R6-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Gripper-R-v1">
+    <inertial>
+      <origin xyz="-0.0866513093214656 -0.05134634705664368 0.04626482355533277" rpy="-6.93889390390723e-18 -7.223496974184673e-18 -2.168404344971009e-19" />
+      <mass value="3.1903885446668565" />
+      <inertia ixx="0.012647413693174141" iyy="0.008895103742984977" izz="0.008066330944517575" ixy="-0.0007078073966856482" iyz="0.0003933177367383586" ixz="0.0007971599472004313" />
+    </inertial>
+    <visual name="Gripper-R-v1_visual">
+      <origin xyz="-0.10184882516079334 -0.09297432143143823 0.0897721566582915" rpy="3.0874431076222657 -0.0555263495232283 -1.5726349136292224" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Gripper-R-v3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="black" />
+    </visual>
+    <collision name="Gripper-R-v1_collision">
+      <origin xyz="-0.10184882516079334 -0.09297432143143823 0.0897721566582915" rpy="3.0874431076222657 -0.0555263495232283 -1.5726349136292224" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Gripper-R-v3.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Finger-R1-v1">
+    <inertial>
+      <origin xyz="-0.1390593462121666 0.0033739152525359374 0.036597190821323906" rpy="2.465190328815662e-32 -0.0 0.0" />
+      <mass value="0.6576980208877721" />
+      <inertia ixx="0.000863089386783034" iyy="0.0008866401445827292" izz="0.00016203298171990626" ixy="3.831502415507796e-06" iyz="8.009785245719064e-06" ixz="-7.15933195772069e-05" />
+    </inertial>
+    <visual name="Finger-R1-v1_visual">
+      <origin xyz="-0.14000000156060183 0.024350476213389385 0.03490510888015457" rpy="1.6580627893946114 -1.8302222558738275e-15 3.950997222210299e-15" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Finger-R1-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="white" />
+    </visual>
+    <collision name="Finger-R1-v1_collision">
+      <origin xyz="-0.14000000156060183 0.024350476213389385 0.03490510888015457" rpy="1.6580627893946114 -1.8302222558738275e-15 3.950997222210299e-15" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Finger-R1-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Finger-R2-v1">
+    <inertial>
+      <origin xyz="-0.015940656909046568 -0.003150030292292456 -0.03657760028751241" rpy="2.465190328815662e-32 -0.0 0.0" />
+      <mass value="0.6576980208878244" />
+      <inertia ixx="0.0008625390437703721" iyy="0.0008861424330820493" izz="0.00016198035020975604" ixy="4.132320754746136e-06" iyz="1.0856521827390513e-05" ixz="-7.156700138277722e-05" />
+    </inertial>
+    <visual name="Finger-R2-v1_visual">
+      <origin xyz="-0.015000001560600539 -0.02435047712495603 -0.03490510582205282" rpy="-1.4835298641951817 -2.4565707238429964e-14 1.0505374422509577e-14" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Finger-R2-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="white" />
+    </visual>
+    <collision name="Finger-R2-v1_collision">
+      <origin xyz="-0.015000001560600539 -0.02435047712495603 -0.03490510582205282" rpy="-1.4835298641951817 -2.4565707238429964e-14 1.0505374422509577e-14" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Finger-R2-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="B-plate">
+    <inertial>
+      <origin xyz="-2.0473835385777938e-10 -0.00011960373971409041 -0.0001497471335176788" rpy="0.0 0.0 0.0" />
+      <mass value="3.660062374988037" />
+      <inertia ixx="0.006464975661024575" iyy="0.05735015105341743" izz="0.06372687893077172" ixy="9.79532294704801e-14" iyz="1.3789501488572245e-06" ixz="-2.5130783238135692e-12" />
+    </inertial>
+    <visual name="B-plate_visual">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/B-plate-v7.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="grey" />
+    </visual>
+    <collision name="B-plate_collision">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/B-plate-v7.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="BASE-v8" />
+  <joint name="base_v8_fixed" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <parent link="base_link" />
+    <child link="BASE-v8" />
+  </joint>
+  <link name="B-plate_tactile">
+    <inertial>
+      <origin xyz="-2.0464069810600966e-10 -0.00011516355935739846 -0.0001496520486526531" rpy="0.0 0.0 0.0" />
+      <mass value="3.6618054902688266" />
+      <inertia ixx="0.006467849168360287" iyy="0.05736083243245671" izz="0.06374043367520912" ixy="9.473744661991293e-14" iyz="1.3757039908884845e-06" ixz="-2.513119600077577e-12" />
+    </inertial>
+    <visual name="B-plate_tactile_visual">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/B-plate_tactile-v4.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="tactile_white" />
+    </visual>
+    <collision name="B-plate_tactile_collision">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/B-plate_tactile-v4.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="L4_tactile">
+    <inertial>
+      <origin xyz="0.02126733063561517 -0.060268967123881086 0.030699848716387663" rpy="1.7641819217140895e-34 -0.0 0.0" />
+      <mass value="4.591134967497476" />
+      <inertia ixx="0.024226930051196346" iyy="0.021818400542612526" izz="0.016338188727631042" ixy="0.0005115745127686211" iyz="-0.0012029072308097346" ixz="0.0004934502796331007" />
+    </inertial>
+    <visual name="L4_tactile_visual">
+      <origin xyz="0.025288852516406307 -0.041861910460860234 0.15831612510948362" rpy="-0.997821462718799 1.483529833035891 -1.5699491216171335" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L4_tactile-v2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="tactile_white" />
+    </visual>
+    <collision name="L4_tactile_collision">
+      <origin xyz="0.025288852516406307 -0.041861910460860234 0.15831612510948362" rpy="-0.997821462718799 1.483529833035891 -1.5699491216171335" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L4_tactile-v2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="L2_tactile">
+    <inertial>
+      <origin xyz="-0.06963384577466844 -0.005176008887229529 -0.05718980672304795" rpy="9.62964972193618e-35 1.5407439555097887e-33 1.2312890597281109e-32" />
+      <mass value="4.985703590136067" />
+      <inertia ixx="0.021744213253525928" iyy="0.0364945637360856" izz="0.020861573603380583" ixy="0.002253008041767286" iyz="8.883051458634179e-06" ixz="-0.00023652337678788403" />
+    </inertial>
+    <visual name="L2_tactile_visual">
+      <origin xyz="-0.07823536444806266 0.031912326797034325 -0.05615644156060157" rpy="1.5707963267949026 -0.2917452121193922 3.0543261909900754" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L2_tactile-v2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="tactile_white" />
+    </visual>
+    <collision name="L2_tactile_collision">
+      <origin xyz="-0.07823536444806266 0.031912326797034325 -0.05615644156060157" rpy="1.5707963267949026 -0.2917452121193922 3.0543261909900754" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/L2_tactile-v2.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Gripper-L_tactile">
+    <inertial>
+      <origin xyz="-0.03090324776143749 -0.07844137880930106 -0.04656464913765504" rpy="0.0 -2.7752360427047644e-40 -2.938735877055719e-39" />
+      <mass value="3.57244334145617" />
+      <inertia ixx="0.013829487857799812" iyy="0.010031870615200503" izz="0.008409926888878878" ixy="0.0005144653509276955" iyz="0.00027453441849112364" ixz="-0.0008338808979472262" />
+    </inertial>
+    <visual name="Gripper-L_tactile_visual">
+      <origin xyz="-0.0184102182672045 -0.1239255329266689 -0.010708672994891302" rpy="3.054326191226752 6.435267499093934e-06 1.5708698822389733" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Gripper-L_tactile-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="tactile_white" />
+    </visual>
+    <collision name="Gripper-L_tactile_collision">
+      <origin xyz="-0.0184102182672045 -0.1239255329266689 -0.010708672994891302" rpy="3.054326191226752 6.435267499093934e-06 1.5708698822389733" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Gripper-L_tactile-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="R2_tactile">
+    <inertial>
+      <origin xyz="0.01856682538713507 0.03396895996268537 -0.08140580612870905" rpy="1.1102230246251565e-16 8.326672684688673e-17 -2.7755575615628907e-17" />
+      <mass value="3.284193537311432" />
+      <inertia ixx="0.016407450985650093" iyy="0.020128332088988135" izz="0.02088031223009345" ixy="0.0015643428927780774" iyz="0.005583152084915383" ixz="0.0013702005993497359" />
+    </inertial>
+    <visual name="R2_tactile_visual">
+      <origin xyz="0.577907321203802 0.2679862222354114 -1.7246251375092965" rpy="0.6918542308868725 -0.2553291300909673 -2.9209845499854405" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R2_tactile-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="tactile_white" />
+    </visual>
+    <collision name="R2_tactile_collision">
+      <origin xyz="0.577907321203802 0.2679862222354114 -1.7246251375092965" rpy="0.6918542308868725 -0.2553291300909673 -2.9209845499854405" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R2_tactile-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="R4_tactile">
+    <inertial>
+      <origin xyz="0.01879089704693442 -0.0533543783741677 -0.07471807423210407" rpy="5.963931949894763e-34 -0.0 0.0" />
+      <mass value="4.476758270384316" />
+      <inertia ixx="0.021415859154285677" iyy="0.023670685638394584" izz="0.015914427570170808" ixy="0.0003058981074584032" iyz="0.00107206605991894" ixz="-0.0007913005933659066" />
+    </inertial>
+    <visual name="R4_tactile_visual">
+      <origin xyz="0.02530022843939875 -0.060523554146536256 0.05498739653794754" rpy="-0.6495995936254658 1.4835298641951806 1.570796326794875" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R4_tactile-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="tactile_white" />
+    </visual>
+    <collision name="R4_tactile_collision">
+      <origin xyz="0.02530022843939875 -0.060523554146536256 0.05498739653794754" rpy="-0.6495995936254658 1.4835298641951806 1.570796326794875" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/R4_tactile-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="Gripper-R_tactile">
+    <inertial>
+      <origin xyz="-0.03033807115601114 0.07889800232041395 0.04656135306967151" rpy="0.0 1.0131648640590342e-59 0.0" />
+      <mass value="3.568775996192286" />
+      <inertia ixx="0.014270334498366566" iyy="0.010017513958125782" izz="0.008855253188015059" ixy="0.0007262153853261345" iyz="-0.00045290957050103664" ixz="0.0008226758243690169" />
+    </inertial>
+    <visual name="Gripper-R_tactile_visual">
+      <origin xyz="-0.01778406056579506 0.03483616843939814 0.010653891156042974" rpy="-0.08726646259971454 3.8375575935572574e-15 -1.570796326794898" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Gripper-R_tactile-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="tactile_white" />
+    </visual>
+    <collision name="Gripper-R_tactile_collision">
+      <origin xyz="-0.01778406056579506 0.03483616843939814 0.010653891156042974" rpy="-0.08726646259971454 3.8375575935572574e-15 -1.570796326794898" />
+      <geometry>
+        <mesh filename="package://twins_description/meshes/Gripper-R_tactile-v1.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="chest_plate_fixed" type="fixed">
+    <origin xyz="0.1389385011661037 0.11694196442587458 0.8837769376913372" rpy="1.5707963267948966 1.8369703310719575e-16 1.570796326794431" />
+    <parent link="BASE-v8" />
+    <child link="B-plate" />
+  </joint>
+  <joint name="b_plate_tactile_fixed" type="fixed">
+    <origin xyz="-0.1170809448354957 -0.08854715756844073 -0.0729385011658822" rpy="-6.576121798603773e-16 4.678479825577763e-13 -3.0763110113290667e-28" />
+    <parent link="B-plate" />
+    <child link="B-plate_tactile" />
+  </joint>
+  <joint name="left_l4_tactile_fixed" type="fixed">
+    <origin xyz="0.19345352999999993 -0.03878778999999987 -0.040813750000000086" rpy="3.141592653589793 1.5707963267948961 0" />
+    <parent link="L4-v1" />
+    <child link="L4_tactile" />
+  </joint>
+  <joint name="left_l2_tactile_fixed" type="fixed">
+    <origin xyz="0.08581791 0.025343560000000168 0.054756609999999956" rpy="1.5707963267948948 -5.551115123125785e-17 -6.481760585158411e-18" />
+    <parent link="L2-v1" />
+    <child link="L2_tactile" />
+  </joint>
+  <joint name="left_gripper_tactile_fixed" type="fixed">
+    <origin xyz="-0.11387989062461326 0.020424211490130233 -0.10360273172197125" rpy="-3.0860359040620913 0.03306585849111478 -3.141592653589793" />
+    <parent link="Gripper-L-v2" />
+    <child link="Gripper-L_tactile" />
+  </joint>
+  <joint name="right_l2_tactile_fixed" type="fixed">
+    <origin xyz="0.07626206999999995 0.010130119999999892 -0.06634982" rpy="-2.307722531883879 0.340776586556805 -2.7887104342205955" />
+    <parent link="R2-v1" />
+    <child link="R2_tactile" />
+  </joint>
+  <joint name="right_l4_tactile_fixed" type="fixed">
+    <origin xyz="0.19378716000000004 0.03875860000000003 -0.04079977000000014" rpy="1.556624922296749e-16 1.5707963267948961 0" />
+    <parent link="R4-v2" />
+    <child link="R4_tactile" />
+  </joint>
+  <joint name="right_gripper_tactile_fixed" type="fixed">
+    <origin xyz="-0.120038787514514 -0.1271651507443478 0.10174918880221491" rpy="-3.0860359040620913 0.033065858491114784 3.141592653589793" />
+    <parent link="Gripper-R-v1" />
+    <child link="Gripper-R_tactile" />
+  </joint>
+  <joint name="left_j1" type="revolute">
+    <origin xyz="-0.14048589 0.34660704000000003 0.7952298000000001" rpy="1.5707963267948972 -6.200618197544143e-15 -1.6580627893946134" />
+    <parent link="base_link" />
+    <child link="L1-v3" />
+    <axis xyz="-2.2996038058498147e-07 5.42485400354326e-16 1.0000003231804215" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="left_j2" type="revolute">
+    <origin xyz="-0.04800000989573249 0.0815000000000002 -0.0880000000537735" rpy="8.158544222545113e-15 1.48352986419518 -3.141592653589793" />
+    <parent link="L1-v3" />
+    <child link="L2-v1" />
+    <axis xyz="-7.504402336781235e-30 -1.0 1.934240670818103e-15" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="left_j3" type="revolute">
+    <origin xyz="0.007582550000000001 0.08150000000000006 0.08666892999999988" rpy="-1.5707963267948986 -5.5511151231257815e-17 1.0575247845128849e-17" />
+    <parent link="L2-v1" />
+    <child link="L3-v1" />
+    <axis xyz="-0.08715600000000004 0.9961949999999999 -4.580558023412756e-18" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="left_j4" type="revolute">
+    <origin xyz="0.030545950000000006 -0.07726486000000002 0.0659982500000001" rpy="-4.488714333391065e-16 1.0548142790824109e-17 6.897003557767237e-17" />
+    <parent link="L3-v1" />
+    <child link="L4-v1" />
+    <axis xyz="-7.400000000000004e-05 -5.999999999552663e-06 -1.0" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="left_j5" type="revolute">
+    <origin xyz="0.18727973999999992 0.0163848500000001 -0.06611388000000006" rpy="-2.9032491973328413e-17 1.5707963267948961 0" />
+    <parent link="L4-v1" />
+    <child link="L5-v1" />
+    <axis xyz="-7.399999999999185e-05 -0.08715599999999994 -0.996195" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="left_j6" type="revolute">
+    <origin xyz="3.9100000000757974e-06 0.046459430000000024 0.04913777" rpy="2.719134943425063 -1.5707963267948966 0" />
+    <parent link="L5-v1" />
+    <child link="L6-v1" />
+    <axis xyz="0.08715599999999998 0.9086135469075242 0.40844326460492425" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="left_j7" type="revolute">
+    <origin xyz="0.003656870000000012 0.017661876232065714 0.06275894144584712" rpy="1.2040784160715368 0.01185964627748394 -3.110726094672352" />
+    <parent link="L6-v1" />
+    <child link="Gripper-L-v2" />
+    <axis xyz="0.0019095136820298326 0.9984574538694081 -0.05548938711247019" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="left_gripper" type="prismatic">
+    <origin xyz="-0.12968240237162829 0.019201661241950205 -0.0914691651857492" rpy="-1.6039132434270837 0.05552634952322444 1.568957739960569" />
+    <parent link="Gripper-L-v2" />
+    <child link="Finger-L1-v2" />
+    <axis xyz="1.0000000000000002 -5.999999999999571e-06 -7.399999999979946e-05" />
+    <limit lower="-0.04" upper="0.0" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="left_gripper_mimic" type="prismatic">
+    <mimic joint="left_gripper" multiplier="1" offset="0" />
+    <origin xyz="-0.12994762823045972 -0.13557339324185932 -0.08312184908417422" rpy="1.5376794101627096 0.05552634952322444 1.568957739960569" />
+    <parent link="Gripper-L-v2" />
+    <child link="Finger-L2-v2" />
+    <axis xyz="-1.0000000000000002 -5.999999999999571e-06 -7.399999999979946e-05" />
+    <limit lower="-0.04" upper="0.0" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="right_j1" type="revolute">
+    <origin xyz="-0.14135744 -0.33664510000000003 0.7952298000000001" rpy="-1.570796326794897 -3.559005659628286e-15 1.6580627893946138" />
+    <parent link="base_link" />
+    <child link="R1-v1" />
+    <axis xyz="-2.2996038000211438e-07 -3.11373567701919e-16 1.0000003231804213" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="right_j2" type="revolute">
+    <origin xyz="-0.04799999993378592 -0.08150000000000006 -0.08800000092533088" rpy="3.141592653589788 1.4835298641951793 -3.141592653589793" />
+    <parent link="R1-v1" />
+    <child link="R2-v1" />
+    <axis xyz="6.682774446075707e-31 -1.0 -1.6983583676531896e-15" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="right_j3" type="revolute">
+    <origin xyz="0.0075825499999999215 0.07950000000000003 -0.08666893999999985" rpy="-1.5707963267948983 -3.784356991804075e-16 2.9206457197086935" />
+    <parent link="R2-v1" />
+    <child link="R3-v1" />
+    <axis xyz="-0.08503726926035905 0.996195 -0.019100554252198778" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="right_j4" type="revolute">
+    <origin xyz="-0.015312582121618963 0.07726528000000002 -0.07118632169409438" rpy="-3.1415926535897927 0.22094693388109993 -3.141592653589793" />
+    <parent link="R3-v1" />
+    <child link="R4-v2" />
+    <axis xyz="-1.9721522630525295e-31 4.440892098500626e-16 1.0" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="right_j5" type="revolute">
+    <origin xyz="0.18728461000000005 -0.01638528000000001 -0.06610000000000013" rpy="-3.141592653589793 1.5707963267948961 0" />
+    <parent link="R4-v2" />
+    <child link="R5-v2" />
+    <axis xyz="-1.0702785038765248e-17 0.08715599999999996 -0.996195" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="right_j6" type="revolute">
+    <origin xyz="0.0 -0.03722092000000004 -0.05645886000000001" rpy="0.4224577101647306 1.5707963267948966 0" />
+    <parent link="R5-v2" />
+    <child link="R6-v1" />
+    <axis xyz="0.087156 -0.9086135469075243 0.4084432646049245" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="right_j7" type="revolute">
+    <origin xyz="-0.003660540000000019 0.05866192621253419 0.028449588318068778" rpy="2.048587489314525 -0.015208675054539112 -3.1122308812362576" />
+    <parent link="R6-v1" />
+    <child link="Gripper-R-v1" />
+    <axis xyz="0.001835752185287379 0.9984571207003633 -0.05549782100817127" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="right_gripper" type="prismatic">
+    <origin xyz="-0.1353433035222466 0.02874872822088662 0.08028992052431753" rpy="-1.603913243427084 0.055526349523224466 1.568957739960569" />
+    <parent link="Gripper-R-v1" />
+    <child link="Finger-R1-v1" />
+    <axis xyz="-1.0000000000000002 3.763904771627376e-30 2.005564173516428e-16" />
+    <limit lower="-0.04" upper="0.0" effort="1000000" velocity="1000000" />
+  </joint>
+  <joint name="right_gripper_mimic" type="prismatic">
+    <mimic joint="right_gripper" multiplier="1" offset="0" />
+    <origin xyz="-0.13535717266961025 0.028734582973807505 0.08003497568629073" rpy="1.5376794101627094 0.055526349523224466 1.568957739960569" />
+    <parent link="Gripper-R-v1" />
+    <child link="Finger-R2-v1" />
+    <axis xyz="1.0000000000000002 3.763904771627376e-30 2.005564173516428e-16" />
+    <limit lower="-0.04" upper="0.0" effort="1000000" velocity="1000000" />
+  </joint>
+</robot>
